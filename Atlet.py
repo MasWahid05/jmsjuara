@@ -6,7 +6,7 @@ import io
 
 # Menambahkan logo di bagian atas aplikasi
 st.set_page_config(page_title="Aplikasi Absensi Atlet JMS JUARA", page_icon="🏃‍♂️")
-   st.image("LOGO.png", width=200)  # Ganti dengan path absolut ke file logo Anda
+st.image("LOGO.png", width=200)  # Ganti dengan path absolut ke file logo Anda
 
 st.title("Aplikasi Absensi Atlet JMS JUARA")
 
