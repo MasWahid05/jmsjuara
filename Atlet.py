@@ -60,7 +60,17 @@ programs_by_category = {
         "1000m Tempo Run",
         "1200m Repeats 4x",
         "400m Recovery Jog",
-        "1500m Time Trial"
+        "1500m Time Trial",
+        "600m Speed Endurance",
+        "300m Fast Repeats 8x",
+        "Long Run (8-10km)",
+        "Pyramid Intervals (400m, 800m, 1200m)",
+        "Hill Repeats for Strength",
+        "Fartlek Training Session",
+        "Race Pace Practice",
+        "Drills for Running Form",
+        "Cooldown Jog (10-15 min)",
+        "Dynamic Stretching Routine"
     ],
     "Long Distance": [
         "5km Endurance Run",
