@@ -23,7 +23,17 @@ programs_by_category = {
         "Flying 50m Sprints 6x",
         "Explosive Start Practice",
         "Block Start Technique",
-        "Resisted Sprint with Parachute"
+        "Resisted Sprint with Parachute",
+        "Short Sprints with Recovery",
+        "Acceleration Phase Drills",
+        "Speed Endurance Runs",
+        "Standing Start Sprints",
+        "Plyometric Box Jumps",
+        "Sprint Technique Analysis",
+        "Speed Ladder Drills",
+        "Hill Sprints for Power",
+        "Reaction Time Sprints",
+        "Treadmill Sprints with Incline"
     ],
     "Middle Distance": [
         "800m Interval 5x",
