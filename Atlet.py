@@ -14,7 +14,7 @@ if os.path.exists(logo_path):
     # Membuat kolom untuk memusatkan logo dan judul
     col1, col2, col3 = st.columns([100, 10, 10])  # Membagi kolom dengan proporsi
     with col2:  # Menggunakan kolom tengah
-        st.image(logo_path, width=300)  # Menggunakan st.image untuk menampilkan logo
+        st.image(logo_path, width=320)  # Menggunakan st.image untuk menampilkan logo
         st.markdown(
             "<h2 style='text-align: center;'>Aplikasi Absensi Atlet JMS JUARA</h2>",
             unsafe_allow_html=True
