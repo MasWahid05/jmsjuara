@@ -12,7 +12,7 @@ logo_path = "LOGO.png"
 # Memeriksa apakah file gambar ada
 if os.path.exists(logo_path):
     # Membuat kolom untuk memusatkan logo dan judul
-    col1, col2, col3 = st.columns([100, 10, 10])  # Membagi kolom dengan proporsi
+    col1, col2, col3 = st.columns([100, 10, 40])  # Membagi kolom dengan proporsi
     with col2:  # Menggunakan kolom tengah
         st.image(logo_path, width=310)  # Menggunakan st.image untuk menampilkan logo
         st.markdown(
