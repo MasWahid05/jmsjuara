@@ -8,7 +8,7 @@ import os
 # Menambahkan logo di bagian atas aplikasi
 st.set_page_config(page_title="Aplikasi Absensi Atlet JMS JUARA", page_icon="🏃‍♂️")
 # Path ke gambar
-logo_path = "C:/Users/maswa/atlet/LOGO.png"
+logo_path = "LOGO.png"
 # Memeriksa apakah file gambar ada
 if os.path.exists(logo_path):
     # Membuat kolom untuk memusatkan logo dan judul
