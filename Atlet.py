@@ -16,7 +16,7 @@ if os.path.exists(logo_path):
     with col2:  # Menggunakan kolom tengah
         st.image(logo_path, width=310)  # Menggunakan st.image untuk menampilkan logo
         st.markdown(
-            "<h3 style='text-align: center;'>Aplikasi Absensi Atlet JMS JUARA</h3>",
+            "<h4 style='text-align: center;'>Aplikasi Absensi Atlet JMS JUARA</h4>",
             unsafe_allow_html=True
         )
 else:
