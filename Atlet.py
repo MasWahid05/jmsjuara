@@ -12,11 +12,11 @@ logo_path = "LOGO.png"
 # Memeriksa apakah file gambar ada
 if os.path.exists(logo_path):
     # Membuat kolom untuk memusatkan logo dan judul
-    col1, col2, col3 = st.columns([180, 130, 70])  # Membagi kolom dengan proporsi
+    col1, col2, col3 = st.columns([10, 10, 10])  # Membagi kolom dengan proporsi
     with col2:  # Menggunakan kolom tengah
-        st.image(logo_path, width=100)  # Menggunakan st.image untuk menampilkan logo
+        st.image(logo_path, width=200)  # Menggunakan st.image untuk menampilkan logo
         st.markdown(
-            "<h1 style='text-align: center;'>Aplikasi Absensi Atlet JMS JUARA</h1>",
+            "<h2 style='text-align: center;'>Aplikasi Absensi Atlet JMS JUARA</h2>",
             unsafe_allow_html=True
         )
 else:
