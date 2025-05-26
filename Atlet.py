@@ -95,8 +95,8 @@ def upload_to_imgur(image):
     client_id = '677f3d0e9999a04'  # Ganti dengan Client ID Imgur Anda
     headers = {'Authorization': f'Client-ID {client_id}'}
     
-    # Mengupload gambar ke Imgur
-    response = requests.post("https://api.imgur.com/3/image", headers=headers, files={'image': image})
+    # Mengupload gambar ke Imgur dengan SSL verification disabled (hanya untuk pengujian)
+    response = requests.post("https://api.imgur.com/3/image", headers=headers, files={'image': image}, verify=False)
     
     if response.status_code == 200:
         return response.json()['data']['link']  # Mengembalikan URL gambar
@@ -148,8 +148,12 @@ with col_right:
         # Menampilkan menu kategori program jika status absen adalah "Hadir"
         if 'status' in st.session_state and st.session_state.status == "Hadir":
             st.markdown("### Pilih Kategori Program")
-            selected_category = st.selectbox("Pilih Kategori Program", list(programs_by_category.keys()))
-            st.session_state.program = st.selectbox("Pilih Program Lari/Olahraga", programs_by_category[selected_category])  # Input program
+            selected_category = st.selectbox("Pilih Kategori Program", list(programs_by_category.keys()), index=list(programs_by_category.keys()).index(st.session_state.selected_category))
+            st.session_state.selected_category = selected_category  # Simpan kategori yang dipilih
+            
+            # Input program latihan yang akan dilakukan
+            program_latihan = st.text_input("Program Latihan yang Dilakukan")  # Input program latihan
+            st.session_state.program = program_latihan  # Simpan program latihan yang dimasukkan
         elif 'status' in st.session_state and st.session_state.status == "Tidak Hadir":
             st.session_state.program = None  # Set program ke None jika tidak hadir
             st.session_state.alasan = st.text_input("Alasan Tidak Hadir")  # Input alasan
@@ -161,7 +165,7 @@ with col_right:
 
             # Tampilkan foto yang diambil jika tersedia
             if foto is not None:
-                st.image(foto, caption="Foto Atlet", use_container_width=True)  # Menggunakan use_container_width
+                st.image(foto, caption="Foto Atlet")  # Menghapus use_container_width
 
             # Logika untuk mengirim data
             if submit_button:
